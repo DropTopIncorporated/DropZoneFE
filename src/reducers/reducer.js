@@ -2,6 +2,7 @@ import { SET_GAMES, SET_CHANNELS, SET_FAVORITES } from "../actions/reducerAction
 
 export const initialState = {
   games: [],
+  streams:[],
   channels: [],
   favorites: []
 }

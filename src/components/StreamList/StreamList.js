@@ -1,9 +1,9 @@
 import React from 'react';
-import ChannelCard from './ChannelCard';
+import StreamCard from './StreamCard';
 
 const ChannelList = () => {
   // const channel = useSelector(getChannels)
-  const fetchedChannels = channels.map(channel => <ChannelCard />)
+  const fetchedChannels = channels.map(channel => <StreamCard />)
 
   return(
     <div>

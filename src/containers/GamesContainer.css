@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.background{
+  background-color: #222629;
+}
+.games {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 10px;
+}
+
+.caption{
+  display: flex;
+  flex-wrap: wrap;
+  width: 10vw;
+  font-family: 'Fredoka One';
+  color: #6B6E70
+}
+
+.gameImage {
+  border-radius: 10px;
+  transition: .5s
+}
+.gameImage:hover {
+  transform: scale(1.1); 
+}

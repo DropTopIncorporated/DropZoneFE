@@ -1,21 +1,28 @@
 import React from 'react'
 import { useGames } from '../hooks/AppContext'
-
+const games = require('../data.json')
+import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
+import styles from './GamesContainer.css'
 
 const GamesContainer = () => {
-  // const games = useGames();
-
-  // const gameElements = games.map(game => (
-  //   <>
-  //   <li key={game.id}>
-  //     <p>{game.name}</p>
-  //     <img src={game.image} alt={game.name}/>
-  //   </li>
-  //   </>
-  // ));
+  const gameElements = games.map(game => (
+    <>
+      <li key={game.gameId} className={styles.card}>
+        <img src={'https://placekitten.com/200/300'} alt={game.name} className={styles.gameImage}/>
+        <div className={styles.caption}>
+        <p>{game.title}</p>  
+        </div>
+        <FavoriteBorderOutlinedIcon />
+      </li>
+    </>
+  ));
   
   return (
-    <h1>hello</h1>
+    <div className={styles.background}>
+      <ul className={styles.games}>
+        {gameElements}
+      </ul>
+    </div>
   )
 }
 
