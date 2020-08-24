@@ -10,8 +10,7 @@ const useStyles = makeStyles((theme) => ({
       border: '2px solid black',
       'border-radius': '10px'
     },
-
-  },
+  }
 }));
 
 export default function SearchBar() {
