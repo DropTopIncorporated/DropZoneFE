@@ -1,3 +1,5 @@
+import { SET_GAMES, SET_CHANNELS, SET_FAVORITES } from "../actions/reducerActions"
+
 export const initialState = {
   games: [],
   channels: [],
