@@ -1,9 +1,11 @@
 import React, { useReducer, useEffect } from 'react';
 import { AppContext } from '../hooks/AppContext';
 import reducer, { initialState } from '../reducers/reducer';
-import { fetchGames } from '../services/games.js'
-import setGames from '../actions/reducerActions';
+import { fetchGames } from '../services/games.js';
+import { setGames } from '../actions/reducerActions';
 
+
+// eslint-disable-next-line react/prop-types
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -16,7 +18,7 @@ const AppProvider = ({ children }) => {
     <AppContext.Provider value={{ state, dispatch }}>
       {children}
     </AppContext.Provider>
-  )
-}
+  );
+};
 
 export default AppProvider;
