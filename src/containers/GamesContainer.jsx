@@ -3,21 +3,19 @@ import { useGames } from '../hooks/AppContext'
 
 
 const GamesContainer = () => {
-  const games = useGames();
+  // const games = useGames();
 
-  const gameElements = games.map(game => (
-    <>
-    <li key={game.id}>
-      <p>{game.name}</p>
-      <img src={game.image} alt={game.name}/>
-    </li>
-    </>
-  ));
+  // const gameElements = games.map(game => (
+  //   <>
+  //   <li key={game.id}>
+  //     <p>{game.name}</p>
+  //     <img src={game.image} alt={game.name}/>
+  //   </li>
+  //   </>
+  // ));
   
   return (
-    <ul>
-      {gameElements}
-    </ul>
+    <h1>hello</h1>
   )
 }
 

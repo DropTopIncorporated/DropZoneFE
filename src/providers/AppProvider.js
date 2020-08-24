@@ -9,10 +9,10 @@ import { setGames } from '../actions/reducerActions';
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  useEffect(() => {
-    fetchGames()
-      .then(games => dispatch(setGames(games)));
-  }, []);
+  // useEffect(() => {
+  //   fetchGames()
+  //     .then(games => dispatch(setGames(games)));
+  // }, []);
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
