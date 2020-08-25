@@ -7,7 +7,6 @@ import GamesContainer from '../../containers/GamesContainer';
 import Header from '../Header/Header';
 import StreamerList from '../StreamList/StreamList';
 
-
 export default function App() {
   return (
 
@@ -21,4 +20,4 @@ export default function App() {
       </Router>
     </>);
 }
-  
+
