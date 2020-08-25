@@ -3,7 +3,6 @@ import { SET_GAMES, SET_FAVORITES, SET_STREAMERS } from '../actions/reducerActio
 export const initialState = {
   games: [],
   streams:[],
-  channels: [],
   favorites: []
 };
 
