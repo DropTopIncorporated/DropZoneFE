@@ -6,8 +6,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import styles from './StreamerCard.css'
 
-
-
 export default function StreamerCard({ streamTitle, streamerName, viewerCount, image }) {
   return (
     <Card className={styles.card} onClick={() => window.open(`https://twitch.tv/${streamerName}`)}>
@@ -16,6 +14,7 @@ export default function StreamerCard({ streamTitle, streamerName, viewerCount, i
           component="img"
           alt={streamerName}
           image={image}
+          className={styles.channelImage}
         />
         <CardContent className={styles.caption}>
           <h3 className={styles.streamerTitle}>
