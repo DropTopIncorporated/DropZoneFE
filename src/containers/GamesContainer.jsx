@@ -26,12 +26,13 @@ const GamesContainer = () => {
           <img src={imageUrl} alt={name} className={styles.gameImage}/>
         </Link>
         <div className={styles.captionContainer}>
-          <p className={styles.caption}>{title} 
-
+          <p className={styles.caption}>
+            {title} 
+          </p>  
             <label>
               <input type='checkbox' hidden={true} />
               <FavoriteBorderOutlinedIcon className={styles.favorite}/>
-            </label></p>  
+            </label>
         </div> 
       </li>
     </>

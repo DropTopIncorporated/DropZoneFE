@@ -4,6 +4,7 @@ import Signup from '../Users/Signup';
 import Header from '../Header/Header';
 import StreamerList from '../StreamList/StreamList';
 import GamesContainer from '../../containers/GamesContainer';
+import Divider from '@material-ui/core/Divider';
 // import PrivateRoute from '../../auth/PrivateRoute';
 import {
   BrowserRouter as Router,
@@ -15,6 +16,7 @@ export default function App() {
     <>
       <Router>
         <Header />
+        <Divider variant="middle" />
         <Switch>
           <Route exact path = '/login' component = {Login}></Route>
           <Route exact path = '/signup' component = {Signup}></Route>

@@ -6,19 +6,18 @@
 .games {
   display: flex;
   flex-flow: row wrap;
-  margin: 10px;
   list-style: none;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .card {
-  margin: 10px;
+  margin: 20px;
 }
 
 .captionContainer{
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline
+  align-items: center;
 }
 .caption{
   display: flex;
@@ -26,21 +25,25 @@
   font-family: 'Fredoka One';
   font-size: 12px;
   color: #6B6E70;
-  margin-bottom: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .gameImage {
+  transform: scale(.9);
   border-radius: 10px;
   transition: .5s
 }
 .gameImage:hover {
-  transform: scale(1.1); 
+  transform: scale(1); 
 }
 
 .favorite {
   color: #6B6E70;
-
+  margin-left: 10px;
 }
-  input[type=checkbox]:checked + .favorite {
+
+input[type=checkbox]:checked + .favorite {
     color: #86C232;
   }
