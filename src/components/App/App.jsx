@@ -5,6 +5,7 @@ import {
   Route } from 'react-router-dom';
 import GamesContainer from '../../containers/GamesContainer';
 import Header from '../Header/Header';
+import StreamerList from '../StreamList/StreamList';
 
 
 export default function App() {
@@ -15,7 +16,7 @@ export default function App() {
         <Header />
         <Switch>
           <Route exact path='/' component={GamesContainer} />
-          {/* <Route exact path='/:name' component={streamerList} /> */}
+          <Route exact path='/:title' component={StreamerList} />
         </Switch>
       </Router>
     </>);

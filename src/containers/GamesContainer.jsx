@@ -11,7 +11,7 @@ const GamesContainer = () => {
   const gameElements = games.map(({ gameId, name, title, imageUrl },) => (
     <>
       <li key={gameId} className={styles.card}>
-        <Link to={`/${name}`} >
+        <Link to={`/${title}`} >
           <img src={imageUrl} alt={name} className={styles.gameImage}/>
         </Link>
         <div className={styles.captionContainer}>

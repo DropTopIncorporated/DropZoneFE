@@ -1,18 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Streamer = ({ streamTitle, streamerName, viewerCount }) => (
-  <div>
-    Title: {streamTitle},
+// eslint-disable-next-line react/prop-types
+const Streamer = ({ streamTitle, streamerName, viewerCount, image }) => (
+  <section>
+    <a href={`https://www.twitch.tv/${streamerName}`}>
+      <img src={image} alt='game image'/>
+    </a>
+    <h3>
+      {streamTitle},
+    </h3>
+    <p>
     Name: {streamerName},
+    </p>
+    <p>
     Viewers: {viewerCount}
-  </div>
+    </p>
+  </section>
 );
-
-Streamer.propTypes = {
-  streamTitle: PropTypes.string.isRequired,
-  streamerName: PropTypes.string.isRequired,
-  viewerCount: PropTypes.number.isRequired
-};
 
 export default Streamer;
