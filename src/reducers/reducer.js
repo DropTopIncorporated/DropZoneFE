@@ -1,4 +1,4 @@
-import { SET_GAMES, SET_CHANNELS, SET_FAVORITES } from '../actions/reducerActions';
+import { SET_GAMES, SET_FAVORITES, SET_STREAMERS } from '../actions/reducerActions';
 
 export const initialState = {
   games: [],
@@ -12,7 +12,7 @@ export default function reducer(state, action) {
     case SET_GAMES: {
       return { ...state, games: action.payload };
     }
-    case SET_CHANNELS: {
+    case SET_STREAMERS: {
       return { ...state, channels: action.payload };
     }
     case SET_FAVORITES: {

@@ -4,10 +4,10 @@ export const setGames = (games) => ({
   payload: games
 });
 
-export const SET_CHANNELS = 'SET_CHANNELS';
-export const setChannels = (channels) => ({
-  type: SET_CHANNELS,
-  payload: channels
+export const SET_STREAMERS = 'SET_STREAMERS';
+export const setStreamers = (streamers) => ({
+  type: SET_STREAMERS,
+  payload: streamers
 });
 
 export const SET_FAVORITES = 'SET_FAVORITES';

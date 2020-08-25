@@ -5,29 +5,19 @@ import {
   Route } from 'react-router-dom';
 import GamesContainer from '../../containers/GamesContainer';
 import Header from '../Header/Header';
-import Divider from '@material-ui/core/Divider';
-import styles from './App.css'
-
+import StreamerList from '../StreamList/StreamList';
 
 export default function App() {
   return (
-<<<<<<< HEAD
-    <div className={styles.background}>
-      <Header />
-      <Divider variant='middle'/>
-      <GamesContainer />
-    </div>);
-=======
 
     <>
       <Router>
         <Header />
         <Switch>
           <Route exact path='/' component={GamesContainer} />
-          {/* <Route exact path='/:name' component={streamerList} /> */}
+          <Route exact path='/:title' component={StreamerList} />
         </Switch>
       </Router>
     </>);
->>>>>>> cbda20eb65025850f920f3b3a7e34604ce98a0c8
 }
-  
+

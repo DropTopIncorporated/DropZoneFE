@@ -1,9 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import Streamer from './Streamer';
+import { useParams } from 'react-router-dom';
+import { fetchStreamers } from '../../services/apiFetches';
 
-const StreamerList = ({ streamers }) => {
-  const streamerDetails = streamers.map(streamer => (
+const StreamerList = () => {
+  const [streams, setStreams] = useState([]);
+
+  const { title } = useParams();
+
+  useEffect(() => {
+    fetchStreamers(title)
+      .then(res => setStreams(res));
+  }, []);
+
+  const streamerDetails = streams.map(streamer => (
     <li key={streamer.name}>
       <Streamer {...streamer}/>
     </li>
@@ -14,10 +24,6 @@ const StreamerList = ({ streamers }) => {
       {streamerDetails}
     </ul>
   );
-};
-
-StreamerList.propTypes = {
-  streamers: PropTypes.arrayOf(PropTypes.array).isRequired
 };
 
 export default StreamerList;
