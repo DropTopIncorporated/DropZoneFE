@@ -14,8 +14,10 @@ export default function AuthProvider({ children }) {
       .catch(err => setAuthError(err));
   };
 
-  const login = (username, password) => authService(fetchLogin, username, password);
-  const signup = (username, password) => authService(fetchSignup, username, password);
+  const login = (email, password) => authService(fetchLogin, email, password);
+
+  const signup = (email, password) => authService(fetchSignup, email, password);
+
   const logout = () => authService(fetchLogout).then(() => setActiveUser(null));
   
 

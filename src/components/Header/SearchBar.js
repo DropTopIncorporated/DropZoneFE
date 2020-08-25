@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import styles from './SearchBar.css'
+import styles from './SearchBar.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +20,7 @@ export default function SearchBar() {
   const classes = useStyles();
 
   return (
-    <form  noValidate autoComplete="off" className={classes.root}>
+    <form noValidate autoComplete="off" className={classes.root}>
       <TextField id="outlined-basic" label="Search" variant="outlined" className={classes.root}/>
     </form>
   );
