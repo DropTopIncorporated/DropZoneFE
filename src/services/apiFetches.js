@@ -10,3 +10,8 @@ export const fetchStreamers = (title) => {
   return fetch(`${url}/streams/${title}`)
     .then(res => res.json());
 };
+
+export const fetchAllStreamers = () => {
+  return fetch(`${url}/streams`)
+    .then(res => res.json());
+};
