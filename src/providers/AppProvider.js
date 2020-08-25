@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect } from 'react';
 import { AppContext } from '../hooks/AppContext';
 import reducer, { initialState } from '../reducers/reducer';
-import { fetchGames } from '../services/games.js';
+import { fetchGamesWithDrops } from '../services/apiFetches';
 import { setGames } from '../actions/reducerActions';
 
 
@@ -9,11 +9,11 @@ import { setGames } from '../actions/reducerActions';
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  // useEffect(() => {
-  //   //terniary looing state.games? 
-  //   fetchGamesWithDrops()
-  //     .then(games => dispatch(setGames(games)));
-  // }, []);
+  useEffect(() => {
+    //terniary looing state.games? 
+    fetchGamesWithDrops()
+      .then(games => dispatch(setGames(games)));
+  }, []);
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
