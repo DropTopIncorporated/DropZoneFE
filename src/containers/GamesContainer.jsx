@@ -11,7 +11,7 @@ const GamesContainer = () => {
         <img src={'https://placekitten.com/200/300'} alt={game.name} className={styles.gameImage}/>
         <div className={styles.captionContainer}>
             <p className={styles.caption}>{game.title} <label>
-              <input type='checkbox' hidden='true'>
+              <input type='checkbox' hidden={true}>
               </input >
               <FavoriteBorderOutlinedIcon className={styles.favorite}/>
             </label></p>  
