@@ -1,4 +1,4 @@
-const localUrl = 'http://localhost:7890/api/v1';
+// const localUrl = 'http://localhost:7890/api/v1';
 const url = 'https://dropzown-staging.herokuapp.com/api/v1';
 
 export const fetchGamesWithDrops = () => {
