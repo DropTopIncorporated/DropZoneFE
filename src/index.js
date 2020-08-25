@@ -3,16 +3,12 @@ import { render } from 'react-dom';
 import App from './components/App/App';
 import AppProvider from './providers/AppProvider';
 import AuthProvider from './providers/AuthProvider';
-import { Provider } from 'react-redux';
-import store from './store';
-
+import './index.css'
 
 render(
   <AuthProvider>
-    <AppProvider>
-      <Provider store = {store} >
+    <AppProvider>    
         <App />
-      </Provider>
     </AppProvider>
   </AuthProvider>,
   document.getElementById('root')

@@ -1,0 +1,16 @@
+.headerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #222629;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.button {
+  margin-left: 70%;
+  background-color:#474B4f;
+  border-radius: 10px;
+}
