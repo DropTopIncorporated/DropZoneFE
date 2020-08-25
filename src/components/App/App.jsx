@@ -1,16 +1,14 @@
 import React from 'react';
-import Login from '../../auth/login';
-import Signup from '../../auth/signup';
+import Login from '../Users/Login';
+import Signup from '../Users/Signup';
+import Header from '../Header/Header';
+import StreamerList from '../StreamList/StreamList';
+import GamesContainer from '../../containers/GamesContainer';
 // import PrivateRoute from '../../auth/PrivateRoute';
-
 import {
   BrowserRouter as Router,
   Switch,
   Route } from 'react-router-dom';
-import GamesContainer from '../../containers/GamesContainer';
-
-import Header from '../Header/Header';
-import StreamerList from '../StreamList/StreamList';
 
 export default function App() {
   return (
