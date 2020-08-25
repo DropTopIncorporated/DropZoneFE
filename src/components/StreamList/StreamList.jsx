@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Streamer from './Streamer';
 import { useParams } from 'react-router-dom';
 import { fetchStreamers } from '../../services/apiFetches';
+import StreamerCard from './StreamerCard';
+import styles from './StreamerList.css'
 
 const StreamerList = () => {
   const [streams, setStreams] = useState([]);
@@ -14,15 +15,17 @@ const StreamerList = () => {
   }, []);
 
   const streamerDetails = streams.map(streamer => (
-    <li key={streamer.name}>
-      <Streamer {...streamer}/>
+    <li key={streamer.name} className={styles.streamerCard}>
+      <StreamerCard {...streamer} />
     </li>
   ));
 
   return (
-    <ul>
+    <div className={styles.streamerContainer}>
+    <ul className={styles.streamerList}>
       {streamerDetails}
     </ul>
+    </div>
   );
 };
 

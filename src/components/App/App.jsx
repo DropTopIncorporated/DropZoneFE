@@ -10,6 +10,7 @@ import {
 import GamesContainer from '../../containers/GamesContainer';
 
 import Header from '../Header/Header';
+import Divider from '@material-ui/core/Divider';
 import StreamerList from '../StreamList/StreamList';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
     <>
       <Router>
         <Header />
+        <Divider variant="middle" />
         <Switch>
           <Route exact path = '/login' component = {Login}></Route>
           <Route exact path = '/signup' component = {Signup}></Route>
