@@ -29,10 +29,10 @@ const GamesContainer = () => {
           <p className={styles.caption}>
             {title} 
           </p>  
-            <label>
-              <input type='checkbox' hidden={true} />
-              <FavoriteBorderOutlinedIcon className={styles.favorite}/>
-            </label>
+          <label>
+            <input type='checkbox' hidden={true} />
+            <FavoriteBorderOutlinedIcon className={styles.favorite}/>
+          </label>
         </div> 
       </li>
     </>
