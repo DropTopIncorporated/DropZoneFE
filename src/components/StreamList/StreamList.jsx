@@ -8,12 +8,10 @@ import SearchBar from '../Search/SearchBar';
 
 const StreamerList = () => {
   const [streams, setStreams] = useState([]);
- 
 
   const [searchStreamer, setSearchStreamer] = useState('');
 
   const { title } = useParams();
-  console.log(streams);
   
   useEffect(() => {
     fetchStreamers(title, searchStreamer)
