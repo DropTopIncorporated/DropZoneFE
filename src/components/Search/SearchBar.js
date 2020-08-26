@@ -16,12 +16,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SearchBar() {
+// eslint-disable-next-line react/prop-types
+export default function SearchBar({ onChange }) {
   const classes = useStyles();
 
   return (
     <form noValidate autoComplete="off" className={classes.root}>
-      <TextField id="outlined-basic" label="Search" variant="outlined" className={classes.root}/>
+      <TextField onChange={onChange} id="outlined-basic" label="Search" variant="outlined" className={classes.root}/>
     </form>
   );
 }
