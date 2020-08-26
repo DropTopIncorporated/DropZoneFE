@@ -6,8 +6,9 @@ export const fetchGamesWithDrops = (search = '') => {
     .then(res => res.json());
 };
 
-export const fetchStreamers = (title) => {
-  return fetch(`${url}/streams/${title}`)
+export const fetchStreamers = (title, search = '') => {
+  return fetch(`${localUrl}/streams/${title}?search=${search}`)
+    // .then(console.log)
     .then(res => res.json());
 };
 
@@ -16,3 +17,8 @@ export const fetchAllStreamers = () => {
     .then(res => res.json());
 };
 
+// export const fetchSearch = (search) => {
+//   return fetch(`${localUrl}/games?search=${search}`)
+//     // .then(console.log)
+//     .then(res => res.json());
+// };

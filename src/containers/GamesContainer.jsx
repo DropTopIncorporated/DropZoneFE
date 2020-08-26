@@ -58,8 +58,6 @@ const GamesContainer = () => {
   return (
     <div className={styles.background}>
       <SearchBar
-        search={searchedGame}
-        result={games}
         onChange={handleChange}
       />
       <ul className={styles.games}>
