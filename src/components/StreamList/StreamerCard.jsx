@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import styles from './StreamerCard.css'
+import styles from './StreamerCard.css';
 
 export default function StreamerCard({ streamTitle, streamerName, viewerCount, image }) {
   return (
@@ -25,7 +25,7 @@ export default function StreamerCard({ streamTitle, streamerName, viewerCount, i
           </p>
           <p>
             Viewers: {viewerCount}
-           </p>
+          </p>
         </CardContent>
       </CardActionArea>
     </Card>

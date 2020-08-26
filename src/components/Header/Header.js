@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchBar from './SearchBar';
 import logo from '../../photos/logo2-green.png';
 import styles from './Header.css';
 import LoginButton from './LoginButton';
@@ -24,12 +23,10 @@ const Header = () => {
       <Link to='/'>
         <img src={logo} className={styles.logo}/>
       </Link>
-      <SearchBar />
       {currentUser
         ? <button onClick={logOut}>Logout</button>
         : <AuthLinks />
       }
-      {/* {user? //logout button OR login/signup button>} */}
     </div>
   );
 };

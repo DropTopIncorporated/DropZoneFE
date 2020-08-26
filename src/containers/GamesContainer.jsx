@@ -2,13 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 import styles from './GamesContainer.css';
-import { useSelector } from '../hooks/AppContext';
+import { useSelector, useDispatch } from '../hooks/AppContext';
 import { getGames } from '../selectors/selectors';
-import { fetchAllStreamers } from '../services/apiFetches';
+import { fetchAllStreamers, fetchSearch, fetchGamesWithDrops } from '../services/apiFetches';
+import SearchBar from '../components/Search/SearchBar';
+import { setGames } from '../actions/reducerActions';
+
 
 const GamesContainer = () => {
   const [streamers, setStreamers] = useState([]);
   let data = useSelector(getGames);
+  const dispatch = useDispatch();
+
+
+  const [searchedGame, setSearchGames] = useState('');
 
   useEffect(() => {
     fetchAllStreamers()
@@ -16,6 +23,16 @@ const GamesContainer = () => {
       .then(res => [...new Set(res)])
       .then(setStreamers);
   }, []);
+
+  const handleChange = ({ target }) => setSearchGames(target.value);
+
+  useEffect(() => {
+    fetchGamesWithDrops(searchedGame)
+      .then(searchedGame => {
+        dispatch(setGames(searchedGame));
+      });
+  }, [searchedGame]);
+
 
   const games = data.filter(({ title }) => streamers.includes(title));
 
@@ -40,6 +57,9 @@ const GamesContainer = () => {
   
   return (
     <div className={styles.background}>
+      <SearchBar
+        onChange={handleChange}
+      />
       <ul className={styles.games}>
         {gameElements}
       </ul>
