@@ -8,14 +8,14 @@ import styles from './StreamerCard.css';
 export default function StreamerCard({ streamTitle, streamerName, viewerCount, image }) {
   return (
   <div className={styles.card} >
-    <Card onClick={() => window.open(`https://twitch.tv/${streamerName}`)}>
         <CardMedia
           component="img"
           alt={streamerName}
           image={image}
           className={styles.channelImage}
+          onClick={() => window.open(`https://twitch.tv/${streamerName}`)}
         />
-      </Card>
+      
         <CardContent className={styles.caption}>
           <h3 className={styles.streamerTitle}>
             {streamTitle},
@@ -27,7 +27,6 @@ export default function StreamerCard({ streamTitle, streamerName, viewerCount, i
             Viewers: {viewerCount}
           </p>
         </CardContent>
-    
     </div>
   );
 }
