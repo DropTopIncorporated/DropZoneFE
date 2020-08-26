@@ -4,10 +4,9 @@
   background-color: #222629;
 }
 .games {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   list-style: none;
-  justify-content: center;
 }
 
 .card {
@@ -42,6 +41,7 @@
 .favorite {
   color: #6B6E70;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 input[type=checkbox]:checked + .favorite {

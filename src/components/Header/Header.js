@@ -2,8 +2,6 @@ import React from 'react';
 import SearchBar from './SearchBar';
 import logo from '../../photos/logo2-green.png';
 import styles from './Header.css';
-import LoginButton from './LoginButton';
-import SignUpButton from './SignUpButton';
 import { Link } from 'react-router-dom';
 import { useActiveUser, useLogout } from '../../hooks/AuthContext';
 
@@ -13,8 +11,12 @@ const Header = () => {
 
   const AuthLinks = () => (
     <div className={styles.noUser}>
-      <button className={styles.loginButton}>Login</button>
-      <button>SignUp</button>
+      <Link to='/login'>
+        <button className={styles.loginButton}>Login</button>
+      </Link>
+      <Link to='/signup'>
+        <button className={styles.signupButton}>Sign Up</button>
+      </Link>
     </div>
   );
   
@@ -26,10 +28,12 @@ const Header = () => {
       </Link>
       <SearchBar />
       {currentUser
-        ? <button onClick={logOut}>Logout</button>
+        ? <button 
+        onClick={logOut}
+        className={styles.logoutButton}
+        >Logout</button >
         : <AuthLinks />
       }
-      {/* {user? //logout button OR login/signup button>} */}
     </div>
   );
 };
