@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchBar from './SearchBar';
 import logo from '../../photos/logo2-green.png';
 import styles from './Header.css';
 import { Link } from 'react-router-dom';
@@ -26,7 +25,6 @@ const Header = () => {
       <Link to='/'>
         <img src={logo} className={styles.logo}/>
       </Link>
-      <SearchBar />
       {currentUser
         ? <button 
         onClick={logOut}

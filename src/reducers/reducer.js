@@ -17,6 +17,7 @@ export default function reducer(state, action) {
     case SET_FAVORITES: {
       return { ...state, favorites: action.payload 
       };
-    }
+    } 
+    default: return state;
   }
 }
