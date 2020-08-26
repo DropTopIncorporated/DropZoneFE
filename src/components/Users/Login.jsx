@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory, Redirect } from 'react-router-dom';
 import { useLogin, useActiveUser } from '../../hooks/AuthContext';
-import { makeStyles } from '@material-ui/core/styles';
+import styles from './Login.css';
+import logo from '../../photos/Logo.png';
 
 
 export default function Login() {
@@ -21,10 +22,15 @@ export default function Login() {
   };
 
   return (
-    <form onSubmit = {handleSubmit}>
-      <input type ='text' name = 'email' value = {email} placeholder = 'Email' onChange = {({ target }) => setEmail(target.value)}/>
-      <input type ='text' name = 'password' value= {password} placeholder = 'PassWord' onChange = {({ target }) => setPassword(target.value)}/>
-      <button>LOGIN</button>
-    </form>
+    <div className={styles.formContainer}>
+      <div className={styles.formBox}>
+        <img src={logo} className={styles.logo}/>
+        <form onSubmit = {handleSubmit} className={styles.form}>
+          <input type ='text' name = 'email' value = {email} placeholder = 'Email' onChange = {({ target }) => setEmail(target.value)}/>
+          <input type ='password' name = 'password' value= {password} placeholder = 'Password' onChange = {({ target }) => setPassword(target.value)}/>
+          <button>Login</button>
+        </form>
+      </div>
+    </div>
   );
 }
