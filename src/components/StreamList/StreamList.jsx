@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchStreamers } from '../../services/apiFetches';
 import StreamerCard from './StreamerCard';
-import styles from './StreamerList.css'
+import styles from './StreamerList.css';
 
 const StreamerList = () => {
   const [streams, setStreams] = useState([]);
@@ -11,7 +11,8 @@ const StreamerList = () => {
 
   useEffect(() => {
     fetchStreamers(title)
-      .then(res => setStreams(res));
+      .then(res => res.sort((a, b) => b.viewerCount - a.viewerCount))
+      .then(setStreams);
   }, []);
 
   const streamerDetails = streams.map(streamer => (
@@ -22,9 +23,9 @@ const StreamerList = () => {
 
   return (
     <div className={styles.streamerContainer}>
-    <ul className={styles.streamerList}>
-      {streamerDetails}
-    </ul>
+      <ul className={styles.streamerList}>
+        {streamerDetails}
+      </ul>
     </div>
   );
 };
