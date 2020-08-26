@@ -3,12 +3,12 @@ import { useParams } from 'react-router-dom';
 import { fetchStreamers, fetchAllStreamers } from '../../services/apiFetches';
 import StreamerCard from './StreamerCard';
 import styles from './StreamerList.css';
-import { useDispatch } from '../../hooks/AppContext';
+
 import SearchBar from '../Search/SearchBar';
 
 const StreamerList = () => {
   const [streams, setStreams] = useState([]);
-  const dispatch = useDispatch();
+ 
 
   const [searchStreamer, setSearchStreamer] = useState('');
 
@@ -22,13 +22,6 @@ const StreamerList = () => {
   }, [searchStreamer]);
   
   const handleChange = ({ target }) => setSearchStreamer(target.value);
-
-  // useEffect(() => {
-  //   fetchStreamers(searchStreamer)
-  //     .then(searchStreamer => {
-  //       setStreams();
-  //     });
-  // }, [searchedGame]);
 
   const streamerDetails = streams.map(streamer => (
     <li key={streamer.name} className={styles.streamerCard}>
