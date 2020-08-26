@@ -12,6 +12,7 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     //terniary looing state.games? 
     fetchGamesWithDrops()
+      .then(res => res.sort((a, b) => a.title.localeCompare(b.title)))
       .then(games => dispatch(setGames(games)));
   }, []);
 

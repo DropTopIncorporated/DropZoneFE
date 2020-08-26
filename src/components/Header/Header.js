@@ -7,8 +7,6 @@ import SignUpButton from './SignUpButton';
 import { Link } from 'react-router-dom';
 import { useActiveUser, useLogout } from '../../hooks/AuthContext';
 
-
-
 const Header = () => {
   const logOut = useLogout();
   const currentUser = useActiveUser();
