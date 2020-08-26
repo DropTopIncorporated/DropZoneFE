@@ -14,3 +14,18 @@
   background-color:#474B4f;
   border-radius: 10px;
 }
+
+.noUser{
+  display: flex;
+  margin-left: 50%
+}
+
+.loginButton {
+  margin: 0px;
+  width: 100px;
+  height: 5vh;
+  background: #6B6E70;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+}

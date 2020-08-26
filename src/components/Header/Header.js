@@ -14,10 +14,10 @@ const Header = () => {
   const currentUser = useActiveUser();
 
   const AuthLinks = () => (
-    <>
-      <LoginButton />
-      <SignUpButton />
-    </>
+    <div className={styles.noUser}>
+      <button className={styles.loginButton}>Login</button>
+      <button>SignUp</button>
+    </div>
   );
   
   //get user state 
