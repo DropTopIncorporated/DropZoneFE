@@ -14,11 +14,8 @@
 }
 
 .caption{
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 10px;
   background-color: #6B6E70;
   color: #474B4f
 }
 
-.channelImage{
-  border-radius: 20px 20px 0px 0px;
-}
