@@ -2,7 +2,7 @@
 
 .headerContainer {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   background-color: #222629;
 }
@@ -39,7 +39,6 @@
 .loginButton {
   width: 100px;
   height: 50px;
-  margin-left: 75vw;
   background: #86C232;
   border-radius: 10px;
   box-shadow: none;
@@ -68,7 +67,6 @@
 
 .favoritesButton{
   margin-right: 10px;
-  margin-left: 75vw;
   width: 100px;
   height: 50px;
   background: #86C232;

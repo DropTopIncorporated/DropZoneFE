@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.title {
+font-family: 'Fredoka One';
+text-decoration: underline;
+font-size: 85px;
+color: #86C232;
+}

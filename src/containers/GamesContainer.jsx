@@ -9,13 +9,10 @@ import SearchBar from '../components/Search/SearchBar';
 import { setGames } from '../actions/reducerActions';
 import { useActiveUser } from '../hooks/AuthContext';
 
-
 const GamesContainer = () => {
   const [allFavorites, setAllFavorites] = useState([]);
   const [changeFavorites, setChangeFavorites] = useState(false);
   const [streamers, setStreamers] = useState([]);
-  // const [favorite, setFavorite] = useState(false);
-  // const [favoriteTitle, setFavoriteTitle] = useState('');
   const [searchedGame, setSearchGames] = useState('');
 
   const activeUser = useActiveUser();
@@ -44,23 +41,6 @@ const GamesContainer = () => {
         dispatch(setGames(searchedGame));
       });
   }, [searchedGame]);
-
-
-
-
-  // useEffect(() => {
-  //   favorite 
-  //     ? postFavorite({ 
-  //       gameId: data.filter(item => item.title === favoriteTitle).gameId,
-  //       gameTitle: favoriteTitle
-  //     })
-  //     : deleteFavorite(favoriteTitle);
-  // }, [favorite]);
-
-  // const handleClick = (title) => {
-  //   favorite ? setFavorite(false) : setFavorite(true);
-  //   setFavoriteTitle(title);
-  // };
 
   const handleClick = (title) => {
     if(!allFavorites.includes(title)) {

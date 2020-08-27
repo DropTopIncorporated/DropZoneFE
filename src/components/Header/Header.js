@@ -3,6 +3,7 @@ import logo from '../../photos/logo2-green.png';
 import styles from './Header.css';
 import { Link } from 'react-router-dom';
 import { useActiveUser, useLogout } from '../../hooks/AuthContext';
+import Title from './Title';
 
 const Header = () => {
   const logOut = useLogout();
@@ -33,12 +34,12 @@ const Header = () => {
     </div>
   );
   
-  //get user state 
   return (
     <div className={styles.headerContainer}>
       <Link to='/'>
         <img src={logo} className={styles.logo}/>
       </Link>
+      <Title />
       {currentUser
         ? <UserSignedIn/>
         : <AuthLinks />
