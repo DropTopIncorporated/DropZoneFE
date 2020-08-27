@@ -21,8 +21,10 @@ export default function SearchBar({ onChange }) {
   const classes = useStyles();
 
   return (
-    <form noValidate autoComplete="off" className={classes.root}>
-      <TextField onChange={onChange} id="outlined-basic" label="Search" variant="outlined" className={classes.root}/>
-    </form>
+    <div className={styles.searchBar}>
+      <form noValidate autoComplete="off" className={classes.root}>
+        <TextField onChange={onChange} id="outlined-basic" label="Search" variant="outlined" className={classes.root}/>
+      </form>
+    </div>
   );
 }
