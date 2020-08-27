@@ -11,18 +11,16 @@
 }
 
 .button {
-  margin-left: 70%;
   background-color:#86C232;
   border-radius: 10px;
 }
 
 .noUser{
   display: flex;
-  margin-left: 60%
+  margin-left: 75%
 }
 
 .loginButton {
-  margin: 0px;
   width: 100px;
   height: 50px;
   background: #86C232;
