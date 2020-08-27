@@ -14,15 +14,17 @@ export default function StreamerCard({ streamTitle, streamerName, viewerCount, i
           onClick={() => window.open(`https://twitch.tv/${streamerName}`)}
         />
         <CardContent className={styles.caption}>
-          <h3 className={styles.streamerTitle}>
+          <p className={styles.streamerTitle}>
+            {streamerName}
+          </p>
+          <div className={styles.subtitle}>
+          <p className={styles.title}>
             {streamTitle},
-          </h3>
-          <p>
-            Name: {streamerName},
         </p>
-        <p>
+        <p className={styles.viewers}>
             Viewers: {viewerCount}
           </p>
+          </div>
         </CardContent>
     </div>
   );
