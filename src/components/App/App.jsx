@@ -10,6 +10,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route } from 'react-router-dom';
+import FavoritesContainer from '../../containers/FavoritesContainer';
+import PrivateRoute from '../../auth/PrivateRoute';
 
 export default function App() {
   return (
@@ -21,6 +23,7 @@ export default function App() {
           <Route exact path = '/login' component = {Login}></Route>
           <Route exact path = '/signup' component = {Signup}></Route>
           <Route exact path='/' component={GamesContainer} />
+          <PrivateRoute exact path='/favorites' component={FavoritesContainer} />
           <Route exact path='/:title' component={StreamerList} />
         </Switch>
       </Router>
