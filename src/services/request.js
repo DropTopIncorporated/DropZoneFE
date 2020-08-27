@@ -4,7 +4,7 @@ const localUrl = 'http://localhost:7890';
 const url = 'https://dropzown-staging.herokuapp.com';
 
 const request = (path, method, body) => {
-  return fetch(`${localUrl}${path}`, {
+  return fetch(`${url}${path}`, {
     method,
     headers: NONBODY_METHODS.includes(method) ? {} : { 'Content-Type': 'application/json' },
     credentials: 'include',
