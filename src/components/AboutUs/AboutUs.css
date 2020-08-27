@@ -1,25 +1,45 @@
-.icon{
-    height: 40px;
-    width: 40px;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+.linkImage {
+    padding: 5px;
+    height: 45px;
+    width: 45px;
+    border-radius: 40px;
 }
 
 .profileImage {
-    height: 40px;
-    width: 40px;
+    height: 130px;
+    width: 170px;
 }
 
 .profileArea {
-    border: 3px solid green;
+    margin: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 400px;
-    height: 400px;
+    width: 25vw;
+    height: 50vh;
+    border-radius: 100px;
+}
+
+.textArea {
+    width: 250px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    margin-top: 0px;
 }
 
 .pageGrid {
-    display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.name{
+    font-family: 'Fredoka One';
+    color: #86C232;
 }

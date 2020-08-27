@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
 .headerContainer {
   display: flex;
   flex-wrap: wrap;
@@ -8,16 +10,36 @@
   width: 100px;
   height: 100px;
   cursor: pointer; 
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 .button {
   background-color:#86C232;
   border-radius: 10px;
 }
+.aboutUs{
+  margin-left: 70vw;
+  margin-right: 10px;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  align-self: center;
+}
+
+.favorites{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  margin-right: 10px;
+}
+.aboutUs2{
+  margin-right: 10px;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  margin-left: 72vw;
+}
 
 .noUser{
   display: flex;
-  margin-left: 75%
 }
 
 .loginButton {
@@ -27,8 +49,9 @@
   border-radius: 10px;
   box-shadow: none;
   border: none;
-  color: #474B4F;
   cursor: pointer; 
+  font-family: 'Raleway', sans-serif;
+  color: white;
 }
 
 .signupButton{
@@ -39,19 +62,20 @@
   border-radius: 10px;
   box-shadow: none;
   border: none;
-  color: #474B4F;
+  font-family: 'Raleway', sans-serif;
+  color: white;
   cursor: pointer; 
 }
 
 .logoutButton {
-  margin-left: 65vw;
   width: 100px;
   height: 50px;
   background: #86C232;
   border-radius: 10px;
   box-shadow: none;
   border: none;
-  color: #474B4F;
+  font-family: 'Raleway', sans-serif;
+  color: white;
   cursor: pointer; 
 }
 
