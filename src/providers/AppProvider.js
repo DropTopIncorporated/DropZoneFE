@@ -10,7 +10,6 @@ const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    //terniary looing state.games? 
     fetchGamesWithDrops()
       .then(games => dispatch(setGames(games)));
   }, []);

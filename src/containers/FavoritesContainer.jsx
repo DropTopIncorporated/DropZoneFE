@@ -14,7 +14,6 @@ export default function FavoritesContainer() {
   useEffect(() => {
     getAllFavorites()
       .then(favorites => favorites.map(item => item.gameTitle))
-    //   .then(res => [...new Set(res)])
       .then(setFavoritesList);
   }, [changeFavorites]);
 

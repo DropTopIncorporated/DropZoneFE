@@ -39,6 +39,7 @@ exports[`App component renders App 1`] = `
         path="/:title"
       />
     </Switch>
+    <Footer />
   </BrowserRouter>
 </Fragment>
 `;

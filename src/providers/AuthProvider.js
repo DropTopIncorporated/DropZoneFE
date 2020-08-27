@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AuthContext } from '../hooks/AuthContext';
 import { fetchLogin, fetchVerify, fetchLogout, fetchSignup } from '../services/auth';
 
+// eslint-disable-next-line react/prop-types
 export default function AuthProvider({ children }) {
   const [activeUser, setActiveUser] = useState(null);
   const [authLoading, setAuthLoading] = useState(true);
