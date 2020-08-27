@@ -19,23 +19,17 @@
   border-radius: 10px;
 }
 .aboutUs{
-  margin-left: 70vw;
-  margin-right: 10px;
+  margin: auto;
+  text-align: center;
   font-family: 'Raleway', sans-serif;
   color: white;
-  align-self: center;
+  text-decoration: none;
 }
 
 .favorites{
   font-family: 'Raleway', sans-serif;
   color: white;
   margin-right: 10px;
-}
-.aboutUs2{
-  margin-right: 10px;
-  font-family: 'Raleway', sans-serif;
-  color: white;
-  margin-left: 72vw;
 }
 
 .noUser{
@@ -45,12 +39,15 @@
 .loginButton {
   width: 100px;
   height: 50px;
+  margin-left: 75vw;
   background: #86C232;
   border-radius: 10px;
   box-shadow: none;
   border: none;
   cursor: pointer; 
   font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
   color: white;
 }
 
@@ -63,6 +60,24 @@
   box-shadow: none;
   border: none;
   font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer; 
+}
+
+.favoritesButton{
+  margin-right: 10px;
+  margin-left: 75vw;
+  width: 100px;
+  height: 50px;
+  background: #86C232;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
   color: white;
   cursor: pointer; 
 }
@@ -75,6 +90,8 @@
   box-shadow: none;
   border: none;
   font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
   color: white;
   cursor: pointer; 
 }

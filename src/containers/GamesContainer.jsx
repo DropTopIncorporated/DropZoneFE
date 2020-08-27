@@ -95,7 +95,7 @@ const GamesContainer = () => {
         <div className={styles.captionContainer}>
           <p className={styles.caption}>
             {title} 
-          </p>  
+          </p>
           { activeUser && <label>
             <input onChange={() => handleClick(title)} checked={allFavorites.includes(title)} type='checkbox' hidden={true} />
             <FavoriteBorderOutlinedIcon className={styles.favorite}/>
@@ -107,9 +107,11 @@ const GamesContainer = () => {
   
   return (
     <div className={styles.background}>
-      <SearchBar
-        onChange={handleChange}
-      />
+      <div className={styles.searchDiv}>
+        <SearchBar
+          onChange={handleChange}
+        />
+      </div>
       <ul className={styles.games}>
         {gameElements}
       </ul>

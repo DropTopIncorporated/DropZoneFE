@@ -10,9 +10,6 @@ const Header = () => {
 
   const AuthLinks = () => (
     <div className={styles.noUser}>
-      <Link to='/aboutus' className={styles.aboutUs}>
-        About Us
-      </Link>
       <Link to='/login'>
         <button className={styles.loginButton}>Login</button>
       </Link>
@@ -23,18 +20,17 @@ const Header = () => {
   );
 
   const UserSignedIn = () => (
-  <div>
-    <Link to='/aboutus' className={styles.aboutUs2}>
-        About Us
-      </Link>
-      <Link to='/favorites' className={styles.favorites}>
+    <div>
+      <Link to='/favorites' >
+        <button className={styles.favoritesButton}>
       Favorites
-    </Link>
+        </button>
+      </Link>
       <button 
-      onClick={logOut}
-      className={styles.logoutButton}
-    >Logout</button >
-  </div>
+        onClick={logOut}
+        className={styles.logoutButton}
+      >Logout</button >
+    </div>
   );
   
   //get user state 

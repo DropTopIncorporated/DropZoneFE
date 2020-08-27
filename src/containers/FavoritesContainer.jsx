@@ -34,8 +34,8 @@ export default function FavoritesContainer() {
     return (
       <li key={i} >
         <Link to={`/${title}`} >
-        <img src={imageUrl} alt={name} className={styles.gameImage}/>
-          </Link>
+          <img src={imageUrl} alt={name} className={styles.gameImage}/>
+        </Link>
         <div className={styles.captionContainer}>
           <p className={styles.caption}>
             {title}

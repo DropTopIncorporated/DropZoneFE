@@ -12,6 +12,7 @@ import {
   Route } from 'react-router-dom';
 import FavoritesContainer from '../../containers/FavoritesContainer';
 import PrivateRoute from '../../auth/PrivateRoute';
+import Footer from '../Footer/Footer';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route exact path='/aboutus' component={AboutUs} />
           <Route exact path='/:title' component={StreamerList} />
         </Switch>
+        <Footer />
       </Router>
     </>);
 }
