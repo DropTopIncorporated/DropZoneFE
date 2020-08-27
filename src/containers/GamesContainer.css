@@ -47,3 +47,8 @@
 input[type=checkbox]:checked + .favorite {
     color: #86C232;
   }
+
+  .searchDiv {
+    display: flex;
+    justify-content: center;
+  }

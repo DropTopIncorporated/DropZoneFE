@@ -18,7 +18,7 @@ const StreamerList = () => {
 
   const handleChange = ({ target }) => setSearchStreamer(target.value);
 
-  if(streams.length === 0) return <div className={styles.no_streams_message} ><h1  >No Live Streams Available</h1></div>;
+  if(streams.length === 0) return <div className={styles.no_streams_message} ><h1 >No Live Streams Available</h1></div>;
   
 
   const streamerDetails = streams.map(streamer => (
@@ -29,9 +29,11 @@ const StreamerList = () => {
 
   return (
     <div className={styles.streamerContainer}>
-      <SearchBar
-        onChange={handleChange}
-      />
+      <div className={styles.searchBarPlacement}>
+        <SearchBar
+          onChange={handleChange}
+        />
+      </div>
       <ul className={styles.streamerList}>
         {streamerDetails}
       </ul>
