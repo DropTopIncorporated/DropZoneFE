@@ -4,7 +4,7 @@ import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutline
 import styles from './GamesContainer.css';
 import { useSelector, useDispatch } from '../hooks/AppContext';
 import { getGames } from '../selectors/selectors';
-import { fetchAllStreamers, fetchSearch, fetchGamesWithDrops, postFavorite, deleteFavorite } from '../services/apiFetches';
+import { fetchAllStreamers, fetchGamesWithDrops, postFavorite, deleteFavorite } from '../services/apiFetches';
 import SearchBar from '../components/Search/SearchBar';
 import { setGames } from '../actions/reducerActions';
 
