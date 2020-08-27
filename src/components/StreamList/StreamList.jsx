@@ -18,6 +18,9 @@ const StreamerList = () => {
 
   const handleChange = ({ target }) => setSearchStreamer(target.value);
 
+  if(streams.length === 0) return <div className={styles.no_streams_message} ><h1  >No Live Streams Available</h1></div>;
+  
+
   const streamerDetails = streams.map(streamer => (
     <li key={streamer.name} className={styles.streamerCard}>
       <StreamerCard {...streamer} />

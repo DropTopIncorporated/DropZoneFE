@@ -5,4 +5,7 @@
   list-style: none;
 }
 
-
+.no_streams_message {
+  display: flex;
+  justify-content: center;
+}

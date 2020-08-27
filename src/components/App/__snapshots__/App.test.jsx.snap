@@ -23,6 +23,11 @@ exports[`App component renders App 1`] = `
         exact={true}
         path="/"
       />
+      <PrivateRoute
+        component={[Function]}
+        exact={true}
+        path="/favorites"
+      />
       <Route
         component={[Function]}
         exact={true}

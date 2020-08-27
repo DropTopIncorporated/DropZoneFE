@@ -1,26 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
 .streamerTitle{
   font-family: 'Fredoka One';
-  color: #474B4f;
+  color: white;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .card{
   width: 20vw;
-  margin: 10px;
+  margin: 20px 10px;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 .caption{
-  background-color: #6B6E70;
-  color: #474B4f;
   border-radius: 0px 0px 20px 20px;
+  margin-top: 0px;
 }
 
 .channelImage{
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 20px;
+  transform: scale(.9);
+  margin-bottom: 0;
+  transition: .5s;
 }
 
+.channelImage:hover{
+  transform: scale(1);
+}
+
+.subtitle{
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.viewers {
+  margin-top: 0px;
+}
+
+.title { 
+  margin-bottom: 0px;
+}
