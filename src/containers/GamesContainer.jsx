@@ -4,18 +4,21 @@ import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutline
 import styles from './GamesContainer.css';
 import { useSelector, useDispatch } from '../hooks/AppContext';
 import { getGames } from '../selectors/selectors';
-import { fetchAllStreamers, fetchSearch, fetchGamesWithDrops } from '../services/apiFetches';
+import { fetchAllStreamers, fetchGamesWithDrops, postFavorite, deleteFavorite } from '../services/apiFetches';
 import SearchBar from '../components/Search/SearchBar';
 import { setGames } from '../actions/reducerActions';
 
 
 const GamesContainer = () => {
   const [streamers, setStreamers] = useState([]);
+  const [favorite, setFavorite] = useState(false);
+  const [favoriteTitle, setFavoriteTitle] = useState('');
+  const [searchedGame, setSearchGames] = useState('');
+
   let data = useSelector(getGames);
   const dispatch = useDispatch();
 
-
-  const [searchedGame, setSearchGames] = useState('');
+  console.log(favorite);
 
   useEffect(() => {
     fetchAllStreamers()
@@ -24,8 +27,6 @@ const GamesContainer = () => {
       .then(setStreamers);
   }, []);
 
-  const handleChange = ({ target }) => setSearchGames(target.value);
-
   useEffect(() => {
     fetchGamesWithDrops(searchedGame)
       .then(searchedGame => {
@@ -33,6 +34,22 @@ const GamesContainer = () => {
       });
   }, [searchedGame]);
 
+
+  useEffect(() => {
+    favorite 
+      ? postFavorite({ 
+        gameId: data.filter(item => item.title === favoriteTitle).gameId,
+        gameTitle: favoriteTitle
+      })
+      : deleteFavorite(favoriteTitle);
+  }, [favorite]);
+
+  const handleClick = (title) => {
+    favorite ? setFavorite(false) : setFavorite(true);
+    setFavoriteTitle(title);
+  };
+
+  const handleChange = ({ target }) => setSearchGames(target.value);
 
   const games = data.filter(({ title }) => streamers.includes(title));
 
@@ -47,7 +64,7 @@ const GamesContainer = () => {
             {title} 
           </p>  
           <label>
-            <input type='checkbox' hidden={true} />
+            <input onClick={() => handleClick(title)} type='checkbox' hidden={true} />
             <FavoriteBorderOutlinedIcon className={styles.favorite}/>
           </label>
         </div> 

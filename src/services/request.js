@@ -1,5 +1,6 @@
 const NONBODY_METHODS = ['GET'];
 
+// const localUrl = 'http://localhost:7890';
 const url = 'https://dropzown-staging.herokuapp.com';
 
 const request = (path, method, body) => {
