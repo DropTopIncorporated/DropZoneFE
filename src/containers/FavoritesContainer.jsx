@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import styles from './GamesContainer.css';
 import { getAllFavorites } from '../services/apiFetches';
 import { useSelector } from '../hooks/AppContext';
 import { getGames } from '../selectors/selectors';
@@ -19,15 +20,20 @@ export default function FavoritesContainer() {
   const listElements = gamesList.map(({ title, name, imageUrl }, i) => {
     return (
       <li key={i} >
-        <img src={imageUrl} />
-        <p>{name}</p>
-        <p>{title}</p>       
+        <img src={imageUrl} alt={name} className={styles.gameImage}/>
+        <div className={styles.captionContainer}>
+          <p className={styles.caption}>
+            {title}
+          </p>
+        </div>
       </li>
     );
   });
   return (
-    <ul>
-      {listElements}       
-    </ul>
+    <div className={styles.background}>
+      <ul className={styles.games}>
+        {listElements}       
+      </ul>
+    </div>
   );
 }
