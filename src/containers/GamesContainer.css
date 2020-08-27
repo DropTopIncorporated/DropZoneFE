@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.background{
+  background-color: #222629;
+}
+.games {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+}
+
+.card {
+  margin: 20px;
+}
+
+.captionContainer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.caption{
+  display: flex;
+  width: 15vw;
+  font-family: 'Fredoka One';
+  font-size: 12px;
+  color: white;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.gameImage {
+  transform: scale(.9);
+  border-radius: 10px;
+  transition: .5s
+}
+.gameImage:hover {
+  transform: scale(1); 
+}
+
+.favorite {
+  color: #6B6E70;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked + .favorite {
+    color: #86C232;
+  }
+
+  .searchDiv {
+    display: flex;
+    justify-content: center;
+  }

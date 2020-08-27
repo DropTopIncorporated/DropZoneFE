@@ -1,0 +1,15 @@
+.streamerList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+}
+
+.no_streams_message {
+  display: flex;
+  justify-content: center;
+}
+
+.searchBarPlacement {
+  display: flex;
+  justify-content: center;
+}
