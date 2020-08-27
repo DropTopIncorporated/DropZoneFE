@@ -1,10 +1,8 @@
-const NONBODY_METHODS = ['GET'];
-
-// const url = 'http://localhost:7890';
-const url = 'https://dropzown-staging.herokuapp.com';
+const NONBODY_METHODS = ['GET', 'DELETE'];
 
 const request = (path, method, body) => {
-  return fetch(`${url}${path}`, {
+  // eslint-disable-next-line no-undef
+  return fetch(`${process.env.API_URL}${path}`, {
     method,
     headers: NONBODY_METHODS.includes(method) ? {} : { 'Content-Type': 'application/json' },
     credentials: 'include',
@@ -19,3 +17,4 @@ const request = (path, method, body) => {
 
 export const post = (path, body) => request(path, 'POST', body);
 export const get = path => request(path, 'GET');
+export const del = path => request(path, 'DELETE');
