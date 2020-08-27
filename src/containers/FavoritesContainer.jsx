@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import styles from './GamesContainer.css';
 import { Link } from 'react-router-dom';
 import { getAllFavorites, deleteFavorite } from '../services/apiFetches';
 import { useSelector } from '../hooks/AppContext';
@@ -33,17 +34,22 @@ export default function FavoritesContainer() {
     return (
       <li key={i} >
         <Link to={`/${title}`} >
-          <img src={imageUrl} />
-        </Link>
-        <p>{name}</p>
-        <p>{title}</p>
+        <img src={imageUrl} alt={name} className={styles.gameImage}/>
+          </Link>
+        <div className={styles.captionContainer}>
+          <p className={styles.caption}>
+            {title}
+          </p>
+        </div>
         <button onClick={() => handleClick(title)} >Delete</button>       
       </li>
     );
   });
   return (
-    <ul>
-      {listElements}       
-    </ul>
+    <div className={styles.background}>
+      <ul className={styles.games}>
+        {listElements}       
+      </ul>
+    </div>
   );
 }
