@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchStreamers } from '../../../services/apiFetches';
+import { fetchStreamers } from '../../services/apiFetches';
 import StreamerCard from './StreamerCard';
 import styles from './StreamerList.css';
-import SearchBar from '../SearchBar';
+import SearchBar from '../Search/SearchBar';
 
 const StreamerList = () => {
   const [streams, setStreams] = useState([]);
