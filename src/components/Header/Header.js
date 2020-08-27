@@ -10,7 +10,7 @@ const Header = () => {
   const currentUser = useActiveUser();
 
   const AuthLinks = () => (
-    <div className={styles.noUser}>
+    <div div className={styles.buttonContainer}>
       <Link to='/login'>
         <button className={styles.loginButton}>Login</button>
       </Link>
@@ -21,7 +21,7 @@ const Header = () => {
   );
 
   const UserSignedIn = () => (
-    <div>
+    <div div className={styles.buttonContainer}>
       <Link to='/favorites' >
         <button className={styles.favoritesButton}>
       Favorites
@@ -40,6 +40,7 @@ const Header = () => {
         <img src={logo} className={styles.logo}/>
       </Link>
       <Title />
+      
       {currentUser
         ? <UserSignedIn/>
         : <AuthLinks />
