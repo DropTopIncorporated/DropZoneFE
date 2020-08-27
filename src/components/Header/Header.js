@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from '../../photos/logo2-green.png';
 import styles from './Header.css';
+import titleStyles from './Title.css';
 import { Link } from 'react-router-dom';
 import { useActiveUser, useLogout } from '../../hooks/AuthContext';
+import Title from './Title';
 
 const Header = () => {
   const logOut = useLogout();
@@ -23,26 +25,26 @@ const Header = () => {
   );
 
   const UserSignedIn = () => (
-  <div>
-    <Link to='/aboutus' className={styles.aboutUs2}>
+    <div>
+      <Link to='/aboutus' className={styles.aboutUs2}>
         About Us
       </Link>
       <Link to='/favorites' className={styles.favorites}>
       Favorites
-    </Link>
+      </Link>
       <button 
-      onClick={logOut}
-      className={styles.logoutButton}
-    >Logout</button >
-  </div>
+        onClick={logOut}
+        className={styles.logoutButton}
+      >Logout</button >
+    </div>
   );
   
-  //get user state 
   return (
     <div className={styles.headerContainer}>
       <Link to='/'>
         <img src={logo} className={styles.logo}/>
       </Link>
+      <Title />
       {currentUser
         ? <UserSignedIn/>
         : <AuthLinks />

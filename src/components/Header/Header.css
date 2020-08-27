@@ -2,7 +2,7 @@
 
 .headerContainer {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   background-color: #222629;
 }
@@ -19,7 +19,6 @@
   border-radius: 10px;
 }
 .aboutUs{
-  margin-left: 70vw;
   margin-right: 10px;
   font-family: 'Raleway', sans-serif;
   color: white;
@@ -35,7 +34,6 @@
   margin-right: 10px;
   font-family: 'Raleway', sans-serif;
   color: white;
-  margin-left: 72vw;
 }
 
 .noUser{
