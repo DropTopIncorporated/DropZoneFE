@@ -27,8 +27,8 @@ const Header = () => {
       </Link>
       {currentUser
         ? <button 
-        onClick={logOut}
-        className={styles.logoutButton}
+          onClick={logOut}
+          className={styles.logoutButton}
         >Logout</button >
         : <AuthLinks />
       }
