@@ -4,8 +4,8 @@ import Signup from '../Users/Signup';
 import Header from '../Header/Header';
 import StreamerList from '../StreamList/StreamList';
 import GamesContainer from '../../containers/GamesContainer';
+import AboutUs from '../AboutUs/AboutUs';
 import Divider from '@material-ui/core/Divider';
-// import PrivateRoute from '../../auth/PrivateRoute';
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,6 +24,7 @@ export default function App() {
           <Route exact path = '/signup' component = {Signup}></Route>
           <Route exact path='/' component={GamesContainer} />
           <PrivateRoute exact path='/favorites' component={FavoritesContainer} />
+          <Route exact path='/aboutus' component={AboutUs} />
           <Route exact path='/:title' component={StreamerList} />
         </Switch>
       </Router>

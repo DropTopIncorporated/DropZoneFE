@@ -7,10 +7,51 @@
 .logo {
   width: 100px;
   height: 100px;
+  cursor: pointer; 
 }
 
 .button {
-  margin-left: 70%;
-  background-color:#474B4f;
+  background-color:#86C232;
   border-radius: 10px;
 }
+
+.noUser{
+  display: flex;
+  margin-left: 75%
+}
+
+.loginButton {
+  width: 100px;
+  height: 50px;
+  background: #86C232;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  color: #474B4F;
+  cursor: pointer; 
+}
+
+.signupButton{
+  margin-left: 10px;
+  width: 100px;
+  height: 50px;
+  background: #86C232;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  color: #474B4F;
+  cursor: pointer; 
+}
+
+.logoutButton {
+  margin-left: 65vw;
+  width: 100px;
+  height: 50px;
+  background: #86C232;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  color: #474B4F;
+  cursor: pointer; 
+}
+

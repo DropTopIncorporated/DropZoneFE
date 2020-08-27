@@ -1,0 +1,25 @@
+/* img {
+    height: 45px;
+    width: 45px;
+} */
+
+.profileImage {
+    height: 130px;
+    width: 130px;
+}
+
+.profileArea {
+    border: 3px solid green;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+}
+
+.pageGrid {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+}
