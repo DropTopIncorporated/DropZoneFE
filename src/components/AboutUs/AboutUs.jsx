@@ -2,14 +2,14 @@ import React from 'react';
 import styles from './AboutUs.css';
 import linkedIn from '../../photos/linkedin.png';
 import Github from '../../photos/github.png';
-
+import placeholder from '../../photos/placeholder.png'
 const AboutUs = () => {
   return (
     <div className={styles.pageGrid}>
       <section >
         <div className={styles.profileArea}>
-          <img className={styles.profileImage} />
-          <h2>Dan Bennington</h2>
+          <img className={styles.profileImage} src={placeholder}/>
+          <h2 className={styles.name}>Dan Bennington</h2>
           <p className={styles.textArea}>Description of why chose project and if you could stream one thing what it would be?</p>
           <div>
             <a href="https://www.linkedin.com/in/dan-bennington/">
@@ -23,8 +23,8 @@ const AboutUs = () => {
       </section>
       <section >
         <div className={styles.profileArea}>
-          <img className={styles.profileImage} />
-          <h2>Lucia Brammer</h2>
+          <img className={styles.profileImage} src={placeholder}/>
+          <h2 className={styles.name}>Lucia Brammer</h2>
           <p className={styles.textArea}>Description of why chose project and if you could stream one thing what it would be?</p>
           <div>
             <a href="https://www.linkedin.com/in/luciabrammer/">
@@ -39,8 +39,8 @@ const AboutUs = () => {
       <section >
         
         <div className={styles.profileArea}>
-          <img className={styles.profileImage}/>
-          <h2>Erik Ford</h2>
+          <img className={styles.profileImage} src={placeholder}/>
+          <h2 className={styles.name}>Erik Ford</h2>
           <p className={styles.textArea}>Description of why chose project and if you could stream one thing what it would be?</p>
           <div>
             <a href="https://www.linkedin.com/in/erik-ford-business/">
@@ -55,8 +55,8 @@ const AboutUs = () => {
       </section>
       <section >
         <div className={styles.profileArea}>
-          <img className={styles.profileImage} />
-          <h2>Max Lamb</h2>
+          <img className={styles.profileImage} src={placeholder}/>
+          <h2 className={styles.name}>Max Lamb</h2>
           <p className={styles.textArea}>Description of why chose project and if you could stream one thing what it would be?</p>
           <div>
             <a href="https://www.linkedin.com/in/max-lamb/">
@@ -70,8 +70,8 @@ const AboutUs = () => {
       </section>
       <section >
         <div className={styles.profileArea}>
-          <img className={styles.profileImage} />
-          <h2>Jake Pendergraft</h2>
+          <img className={styles.profileImage} src={placeholder}/>
+          <h2 className={styles.name}>Jake Pendergraft</h2>
           <p className={styles.textArea}>Description of why chose project and if you could stream one thing what it would be?</p>
           <div>
             <a href="https://www.linkedin.com/in/jake-pendergraft/">
