@@ -1,0 +1,10 @@
+.searchBar {
+    margin-top: 5px;
+    border: 4px solid #86C232;
+    border-radius: 15px;
+    background: rgba(207, 203, 203, 0.719)
+}
+
+.textField {
+    border-radius: 15px;
+}

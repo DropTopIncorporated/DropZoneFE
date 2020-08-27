@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '../../photos/logo2-green.png';
 import styles from './Header.css';
-import titleStyles from './Title.css';
 import { Link } from 'react-router-dom';
 import { useActiveUser, useLogout } from '../../hooks/AuthContext';
 import Title from './Title';
@@ -12,9 +11,6 @@ const Header = () => {
 
   const AuthLinks = () => (
     <div className={styles.noUser}>
-      <Link to='/aboutus' className={styles.aboutUs}>
-        About Us
-      </Link>
       <Link to='/login'>
         <button className={styles.loginButton}>Login</button>
       </Link>
@@ -26,11 +22,10 @@ const Header = () => {
 
   const UserSignedIn = () => (
     <div>
-      <Link to='/aboutus' className={styles.aboutUs2}>
-        About Us
-      </Link>
-      <Link to='/favorites' className={styles.favorites}>
+      <Link to='/favorites' >
+        <button className={styles.favoritesButton}>
       Favorites
+        </button>
       </Link>
       <button 
         onClick={logOut}

@@ -2,26 +2,29 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: '25ch',
-      color: '#474B4F',
-    },
-    'MuiFormControl-root': {
-      border: 'grey'
-    }
-  }
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     '& > *': {
+//       margin: theme.spacing(1),
+//       width: '25ch',
+//       color: '#474B4F',
+//     },
+//     'MuiFormControl-root': {
+//     }
+//   }
+// }));
 
 // eslint-disable-next-line react/prop-types
 export default function SearchBar({ onChange }) {
-  const classes = useStyles();
 
   return (
-    <form noValidate autoComplete="off" className={classes.root}>
-      <TextField onChange={onChange} id="outlined-basic" label="Search" variant="outlined" className={classes.root}/>
-    </form>
+    <div>
+      <form noValidate autoComplete="off" className={styles.searchBar}>
+        <TextField onChange={onChange}className={styles.textField}
+          id="outlined-basic" label="Search" variant="outlined" />
+      </form>
+    </div>
   );
 }
+
+// className={styles.textField}
