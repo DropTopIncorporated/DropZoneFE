@@ -4,21 +4,32 @@ import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutline
 import styles from './GamesContainer.css';
 import { useSelector, useDispatch } from '../hooks/AppContext';
 import { getGames } from '../selectors/selectors';
-import { fetchAllStreamers, fetchGamesWithDrops, postFavorite, deleteFavorite } from '../services/apiFetches';
+import { fetchAllStreamers, fetchGamesWithDrops, postFavorite, deleteFavorite, getAllFavorites } from '../services/apiFetches';
 import SearchBar from '../components/Search/SearchBar';
 import { setGames } from '../actions/reducerActions';
+import { useActiveUser } from '../hooks/AuthContext';
 
 
 const GamesContainer = () => {
+  const [allFavorites, setAllFavorites] = useState([]);
+  const [changeFavorites, setChangeFavorites] = useState(false);
   const [streamers, setStreamers] = useState([]);
-  const [favorite, setFavorite] = useState(false);
-  const [favoriteTitle, setFavoriteTitle] = useState('');
+  // const [favorite, setFavorite] = useState(false);
+  // const [favoriteTitle, setFavoriteTitle] = useState('');
   const [searchedGame, setSearchGames] = useState('');
+
+  const activeUser = useActiveUser();
 
   let data = useSelector(getGames);
   const dispatch = useDispatch();
 
-  console.log(favorite);
+  useEffect(() => {
+   
+    getAllFavorites()
+      .then(res => res.map(item => item.gameTitle))
+      .then(setAllFavorites);
+
+  }, [changeFavorites]);
 
   useEffect(() => {
     fetchAllStreamers()
@@ -35,38 +46,60 @@ const GamesContainer = () => {
   }, [searchedGame]);
 
 
-  useEffect(() => {
-    favorite 
-      ? postFavorite({ 
-        gameId: data.filter(item => item.title === favoriteTitle).gameId,
-        gameTitle: favoriteTitle
-      })
-      : deleteFavorite(favoriteTitle);
-  }, [favorite]);
+
+
+  // useEffect(() => {
+  //   favorite 
+  //     ? postFavorite({ 
+  //       gameId: data.filter(item => item.title === favoriteTitle).gameId,
+  //       gameTitle: favoriteTitle
+  //     })
+  //     : deleteFavorite(favoriteTitle);
+  // }, [favorite]);
+
+  // const handleClick = (title) => {
+  //   favorite ? setFavorite(false) : setFavorite(true);
+  //   setFavoriteTitle(title);
+  // };
 
   const handleClick = (title) => {
-    favorite ? setFavorite(false) : setFavorite(true);
-    setFavoriteTitle(title);
+    if(!allFavorites.includes(title)) {
+      postFavorite({ 
+        gameId: data.filter(item => item.title === title).gameId,
+        gameTitle: title
+      })
+        .then(res => {
+          setAllFavorites([...allFavorites, res.gameTitle]); 
+          changeFavorites ? setChangeFavorites(false) : setChangeFavorites(true);
+        });        
+    }
+    else {
+      deleteFavorite(title)
+        .then(res => {
+          setAllFavorites(allFavorites.filter(item => item.gameTitle !== res.gameTitle));
+          changeFavorites ? setChangeFavorites(false) : setChangeFavorites(true);
+        });       
+    }
   };
 
   const handleChange = ({ target }) => setSearchGames(target.value);
 
   const games = data.filter(({ title }) => streamers.includes(title));
 
-  const gameElements = games.map(({ gameId, name, title, imageUrl }) => (
+  const gameElements = games.map(({ name, title, imageUrl }, i) => (
     <>
-      <li key={gameId} className={styles.card}>
-        <Link to={`/${title}`} >
+      <li key={imageUrl} className={styles.card}>
+        <Link key={title} to={`/${title}`} >
           <img src={imageUrl} alt={name} className={styles.gameImage}/>
         </Link>
         <div className={styles.captionContainer}>
           <p className={styles.caption}>
             {title} 
           </p>  
-          <label>
-            <input onClick={() => handleClick(title)} type='checkbox' hidden={true} />
+          { activeUser && <label>
+            <input onChange={() => handleClick(title)} checked={allFavorites.includes(title)} type='checkbox' hidden={true} />
             <FavoriteBorderOutlinedIcon className={styles.favorite}/>
-          </label>
+          </label>}
         </div> 
       </li>
     </>
