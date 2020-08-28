@@ -13,3 +13,25 @@
   display: flex;
   justify-content: center;
 }
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  .streamerList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+  }
+  
+  .no_streams_message {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .searchBarPlacement {
+    display: flex;
+    justify-content: center;
+  }
+
+
+}

@@ -43,3 +43,57 @@
     font-family: 'Fredoka One';
     color: #86C232;
 }
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+
+    .linkImage {
+        padding: 5px;
+        height: 45px;
+        width: 45px;
+        border-radius: 40px;
+    }
+    
+    .profileImage {
+        height: 130px;
+        width: 170px;
+        border-radius: 20px;
+    }
+    
+    .profileArea {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25vw;
+        height: 50vh;
+        border-radius: 100px;
+        margin-top: 140px;
+        margin-bottom: 140px;
+    }
+    
+    .textArea {
+        width: 250px;
+        font-family: 'Raleway', sans-serif;
+        color: white;
+        margin-top: 0px;
+    }
+    
+    .pageGrid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .name{
+        font-family: 'Fredoka One';
+        color: #86C232;
+    }
+    .linkImageContainer {
+      display: grid;
+      grid-template-rows: auto;
+        justify-content: center;
+    }
+}
