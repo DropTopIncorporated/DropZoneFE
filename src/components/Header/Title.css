@@ -6,3 +6,15 @@ text-decoration: underline;
 font-size: 85px;
 color: #86C232;
 }
+
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .title {
+        font-family: 'Fredoka One';
+        text-decoration: underline;
+        font-size: 35px;
+        color: #86C232;
+        }
+}
