@@ -54,3 +54,30 @@
 .title { 
   margin-bottom: 0px;
 }
+
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+  .card{
+    width: 30vw;
+    margin: 20px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .caption{
+    border-radius: 0px 0px 20px 20px;
+    margin-top: 0px;
+  }
+  
+  .channelImage{
+    border-radius: 20px;
+    transform: scale(.9);
+    margin-bottom: 0;
+    transition: .5s;
+  }
+  
+
+}

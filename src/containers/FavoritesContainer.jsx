@@ -40,7 +40,7 @@ export default function FavoritesContainer() {
             {title}
           </p>
         </div>
-        <button onClick={() => handleClick(title)} >Delete</button>       
+        <button className={styles.deleteButton}onClick={() => handleClick(title)} >Delete</button>       
       </li>
     );
   });
