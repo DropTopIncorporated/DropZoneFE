@@ -10,12 +10,14 @@
 }
 
 .profileImage {
-    height: 130px;
-    width: 170px;
+    height: 200px;
+    width: 250px;
+    border-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .profileArea {
-    margin: 20px;
+    margin-top: 20vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -26,7 +28,7 @@
 }
 
 .textArea {
-    width: 250px;
+    width: 300px;
     font-family: 'Raleway', sans-serif;
     color: white;
     margin-top: 0px;
@@ -43,6 +45,12 @@
     font-family: 'Fredoka One';
     color: #86C232;
 }
+
+.cardContainer{
+    margin-bottom: 50px;
+}
+
+
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {

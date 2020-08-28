@@ -6,7 +6,7 @@ import placeholder from '../../photos/placeholder.png';
 const AboutUs = () => {
   return (
     <div className={styles.pageGrid}>
-      <section >
+      <section className={styles.cardContainer}>
         <div className={styles.profileArea}>
           <img className={styles.profileImage} src="/dan.jpg"/>
           <h2 className={styles.name}>Dan Bennington</h2>
@@ -21,7 +21,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section >
+      <section section className={styles.cardContainer}>
         <div className={styles.profileArea}>
           <img className={styles.profileImage} src="/2E5A5DCD-9C04-4C6C-8C61-D1CF7046836F_1_201_a.jpeg"/>
           <h2 className={styles.name}>Lucia Brammer</h2>
@@ -33,11 +33,13 @@ const AboutUs = () => {
             <a href="https://github.com/brammerl">
               <img className={styles.linkImage} src={Github} />
             </a>
+            <a href="https://lucia-brammer.com">
+              <img className={styles.linkImage} src='/websitelogo.png' />
+            </a>
           </div>
         </div>
       </section>
-      <section >
-        
+      <section section className={styles.cardContainer}>     
         <div className={styles.profileArea}>
           <img className={styles.profileImage} src="/0.jpg"/>
           <h2 className={styles.name}>Erik Ford</h2>
@@ -53,7 +55,7 @@ const AboutUs = () => {
         </div>
         
       </section>
-      <section >
+      <section section className={styles.cardContainer}>
         <div className={styles.profileArea}>
           <img className={styles.profileImage} src="/BBDE9A32-2FE6-442C-8656-BBB09CB9CAEE_1_105_c.jpeg"/>
           <h2 className={styles.name}>Max Lamb</h2>
@@ -68,7 +70,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section >
+      <section section className={styles.cardContainer}>
         <div className={styles.profileArea}>
           <img className={styles.profileImage} src="/headshot.jpg"/>
           <h2 className={styles.name}>Jake Pendergraft</h2>
